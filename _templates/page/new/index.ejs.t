@@ -1,5 +1,5 @@
 ---
-to: src/containers/<%= Name || 'NewPage' %>.js
+to: src/pages/<%= Name || 'NewPage' %>.js
 ---
 import React from 'react';
 import Header from '../components/Header';
