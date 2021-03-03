@@ -1,8 +1,8 @@
 ---
-to: _templates/<%= name %>/<%= action || 'new' %>/hello.ejs.t
+to: _templates/<%= name %>/<%= action || 'new' %>/index.ejs.t
 ---
 ---
-to: app/hello.js
+to: src/index.js
 ---
 const hello = ```
 Hello!
