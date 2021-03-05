@@ -1,13 +1,13 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import Hello from './pages/Hello';
 import Home from './pages/Home';
+import Hello from './pages/Hello';
 
 function App () {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/Hello" component={Hello} />
+      <Route exact path="/hello-world" component={Hello} />
     </Switch>
   );
 }

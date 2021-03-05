@@ -8,7 +8,7 @@ export default function Hello () {
       <Header />
       <Container className="pt-3 pb-3">
         <h1>Hello World</h1>
-        <p>Welcome to my page</p>
+        <p>Welcome to HelloWorld.</p>
       </Container>
     </>
   );
