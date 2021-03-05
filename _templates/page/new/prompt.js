@@ -9,7 +9,7 @@ module.exports = [
   },
   {
     type: 'input',
-    name: 'description',
+    name: 'desc',
     message: `What's the page description?`
   }
 ];
