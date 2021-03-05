@@ -1,6 +1,5 @@
 ---
 to: src/pages/<%= Name || 'NewPage' %>.js
-arbitrary: <% title = null, desc = null %>
 ---
 import React from 'react';
 import Header from '../components/Header';
@@ -11,8 +10,10 @@ export default function <%= Name || 'NewPage' %> () {
     <>
       <Header />
       <Container className="pt-3 pb-3">
-        <h1><%= title || Name || 'New Page' %></h1>
-        <p><%= desc || 'Lorem ipsum dolor sine.' %></p>
+        <h1><%= title || Name || 'NewPage' %></h1>
+        <% if ( description ) { %>
+        <p><%= description %></p>
+        <% } %>
       </Container>
     </>
   );
