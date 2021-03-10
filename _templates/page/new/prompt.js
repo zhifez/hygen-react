@@ -16,5 +16,10 @@ module.exports = [
     type: 'input',
     name: 'route',
     message: `What's the page route?`
+  },
+  {
+    type: 'confirm',
+    name: 'hasCard',
+    message: `Create card component for page?`
   }
 ];
