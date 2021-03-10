@@ -9,7 +9,8 @@ export default function Header () {
         <Navbar.Collapse id="header-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/Hello">hello</Nav.Link>
+            <Nav.Link href="/hello">Hello</Nav.Link>
+            <Nav.Link href="/hello-world">Hello</Nav.Link>
           </Nav>
         </Navbar.Collapse>
     </Navbar>

@@ -6,7 +6,7 @@ arbitrary: <% title = null, desc = null %>
   PageName = ( Name ?? 'New Page' ),
   PageTitle = ( title ?? Name ?? 'New Page' ),
   PageDesc = ( desc ?? 'Lorem ipsum dolor sine.' ),
-  CardName = ( Name ?? 'New' ) + 'Card',
+  CardName = ( Name ?? 'New' ) + 'Card'
 %>import React from 'react';
 import Header from '../components/Header';
 <% if ( hasCard ) { %>
@@ -15,7 +15,7 @@ import <%= CardName %> from '../components/<%= CardName %>';
 <% } else { %>
 import { Container } from 'react-bootstrap';
 <% } %>
-export default function <%= PageName %> () {
+export default function <%= Name || 'NewPage' %> () {
   return (
     <>
       <Header />
