@@ -10,7 +10,7 @@ Part 3: https://medium.com/codex/hygen-the-sh-t-out-of-your-react-application-pa
 
 ## Instructions
 
-### Run the app:
+### 1. Run the app:
 
 ```npm start```
 
@@ -19,6 +19,6 @@ or
 ```yarn start```
 
 
-### Create a new Page
+### 2. Create a new Page:
 
 ```hygen page new Hello```
