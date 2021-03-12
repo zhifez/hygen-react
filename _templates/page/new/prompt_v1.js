@@ -40,6 +40,10 @@ module.exports = {
       }
     ] );
 
+    if ( userInputs.route[0] !== '/' ) {
+      userInputs.route = `/${userInputs.route}`;
+    }
+
     const final = Object.assign ( args, userInputs );
     final.hasCard = final[ 'pageType' ] === '1';
     return final;

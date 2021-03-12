@@ -24,16 +24,16 @@ export default function <%= Name || 'NewPage' %> () {
         <p><%= PageDesc %></p>
         <% if ( hasCard ) { %>
         <Row>
-          <Col xs={6} md={3}>
+          <Col xs={<%= cardColumnMobile %>} md={<%= cardColumnWeb %>}>
             <<%= CardName %> />
           </Col>
-          <Col xs={6} md={3}>
+          <Col xs={<%= cardColumnMobile %>} md={<%= cardColumnWeb %>}>
             <<%= CardName %> />
           </Col>
-          <Col xs={6} md={3}>
+          <Col xs={<%= cardColumnMobile %>} md={<%= cardColumnWeb %>}>
             <<%= CardName %> />
           </Col>
-          <Col xs={6} md={3}>
+          <Col xs={<%= cardColumnMobile %>} md={<%= cardColumnWeb %>}>
             <<%= CardName %> />
           </Col>
         </Row>

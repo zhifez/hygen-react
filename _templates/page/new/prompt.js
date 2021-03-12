@@ -7,6 +7,34 @@ const pageTypes = [
   'formik'
 ];
 
+const prompt_card_display = async ( prompter, inputs ) => {
+  const userInputs = await prompter.prompt ( [
+    {
+      type: 'input',
+      name: 'cardColumnWeb',
+      default: 4,
+      message: 'Amount of columns to display Card in (Web):'
+    },
+    {
+      type: 'input',
+      name: 'cardColumnMobile',
+      default: 2,
+      message: 'Amount of columns to display Card in (Mobile):'
+    }
+  ] );
+
+  const final = Object.assign ( inputs, userInputs );
+  final.hasCard = true;
+  
+  final.cardColumnWeb = parseInt ( final.cardColumnWeb ) ?? 4; // Reset to 4 if got NULL
+  final.cardColumnWeb = 12 / final.cardColumnWeb;
+
+  final.cardColumnMobile = parseInt ( final.cardColumnMobile ) ?? 2; // Reset to 2 if got NULL
+  final.cardColumnMobile = 12 / final.cardColumnMobile;
+
+  return final;
+}
+
 module.exports = {
   prompt: async ( { prompter, args } ) => {
     let pageTypeMessage = 'Type of page (by index):';
@@ -17,7 +45,7 @@ module.exports = {
       {
         type: 'input',
         name: 'pageType',
-        default: '0',
+        default: 0,
         message: pageTypeMessage
       },
       {
@@ -45,7 +73,15 @@ module.exports = {
     }
 
     const final = Object.assign ( args, userInputs );
-    final.hasCard = ( final[ 'pageType' ] === '1' );
-    return final;
+    final.hasCard = false;
+
+    const pageType = parseInt ( final[ 'pageType' ] ) ?? 0;
+    switch ( pageType ) {
+    case 1:
+      return prompt_card_display ( prompter, final );
+
+    default:
+      return final;
+    }
   }
 }
