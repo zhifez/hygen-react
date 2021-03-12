@@ -7,3 +7,18 @@ Part 1: https://medium.com/codex/hygen-the-sh-t-out-of-your-react-application-pa
 Part 2: https://medium.com/codex/hygen-the-sh-t-out-of-your-react-application-part-2-ce004d9bab45
 
 Part 3: https://medium.com/codex/hygen-the-sh-t-out-of-your-react-application-part-3-5c3d0010fa43
+
+## Instructions
+
+### Run the app:
+
+```npm start```
+
+or
+
+```yarn start```
+
+
+### Create a new Page
+
+```hygen page new Hello```
